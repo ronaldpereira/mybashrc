@@ -3,10 +3,9 @@
 # for examples
 
 alias atualizar="sudo apt update && sudo apt full-upgrade && sudo apt autoremove && sudo apt clean && sudo apt update"
-alias sb="cd ~/Dropbox/UFMG/SB/tp3/code && atom ."
+alias sb="cd ~/Dropbox/UFMG/SB/tp3/code && atom .."
 alias ufmg="cd ~/Dropbox/UFMG"
 alias biologistica="cd ~/biologistica && git pull && atom . && grunt"
-alias compile="gcc -Wall -Wextra -g -O0"
 
 function lazygit()
 {
