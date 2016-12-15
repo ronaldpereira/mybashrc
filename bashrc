@@ -6,7 +6,7 @@ alias atualizar="sudo apt update && sudo apt full-upgrade && sudo apt autoremove
 alias sb="cd ~/Dropbox/UFMG/SB/tp3/code && atom .."
 alias ufmg="cd ~/Dropbox/UFMG"
 alias biologistica="cd ~/biologistica && git pull && atom . && grunt"
-alias tracksale="cd ~/Dropbox/Tracksale/todo-list"
+alias tracksale="cd ~/Dropbox/Tracksale/todo-list && atom ."
 
 function ga() # Just add the commit to the local reposotory for later push
 {
