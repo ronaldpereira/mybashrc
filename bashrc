@@ -6,8 +6,15 @@ alias atualizar="sudo apt update && sudo apt full-upgrade && sudo apt autoremove
 alias sb="cd ~/Dropbox/UFMG/SB/tp3/code && atom .."
 alias ufmg="cd ~/Dropbox/UFMG"
 alias biologistica="cd ~/biologistica && git pull && atom . && grunt"
+alias tracksale="cd ~/Dropbox/Tracksale/todo-list"
 
-function lazygit()
+function ga() # Just add the commit to the local reposotory for later push
+{
+    git add -A
+    git commit -m "$1"
+}
+
+function lazygit() # Adds and push to the Git online repository
 {
     git add -A
     git commit -m "$1"
