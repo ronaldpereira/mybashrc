@@ -2,11 +2,15 @@
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 # for examples
 
-alias atualizar="sudo apt update && sudo apt full-upgrade && sudo apt autoremove && sudo apt clean && sudo apt update"
-alias sb="cd ~/Dropbox/UFMG/SB/tp3/code && atom .."
+alias atualizar="sudo apt update && sudo apt upgrade && sudo apt full-upgrade && sudo apt autoremove && sudo apt clean && sudo apt update"
+alias pm="cd ~/Dropbox/UFMG/pm/tp1/src/code && atom .."
 alias ufmg="cd ~/Dropbox/UFMG"
 alias biologistica="cd ~/biologistica && git pull && atom . && grunt"
-alias tracksale="cd ~/Dropbox/Tracksale/todo-list && atom ."
+
+function gc() # Clone a repository of my own GitHub
+{
+    git clone https://github.com/ronaldpereira/$1
+}
 
 function ga() # Just add the commit to the local reposotory for later push
 {
