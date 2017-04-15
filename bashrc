@@ -6,6 +6,7 @@ alias atualizar="sudo apt update && sudo apt upgrade && sudo apt full-upgrade &&
 alias pm="cd ~/Dropbox/UFMG/pm/tp1/src/code && atom .."
 alias ufmg="cd ~/Dropbox/UFMG"
 alias biologistica="cd ~/biologistica && git pull && atom . && grunt"
+alias sml="rlwrap /usr/bin/sml"
 
 function gc() # Clone a repository of my own GitHub
 {
