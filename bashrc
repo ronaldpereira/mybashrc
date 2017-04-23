@@ -3,14 +3,14 @@
 # for examples
 
 alias atualizar="sudo apt update && sudo apt upgrade && sudo apt full-upgrade && sudo apt autoremove && sudo apt clean && sudo apt update"
-alias pm="cd ~/Dropbox/UFMG/pm/tp1/src/code && atom .."
 alias ufmg="cd ~/Dropbox/UFMG"
-alias biologistica="cd ~/biologistica && git pull && atom . && grunt"
 alias sml="rlwrap /usr/bin/sml"
+alias pm="cd ~/Dropbox/UFMG/pm/tp2/src/code && atom ../.."
+alias po="cd ~/Dropbox/UFMG/po/tppo/src/code && atom ../.."
 
 function gc() # Clone a repository of my own GitHub
 {
-    git clone https://github.com/ronaldpereira/$1
+    git clone git@github.com:ronaldpereira/$1.git
 }
 
 function ga() # Just add the commit to the local reposotory for later push
