@@ -6,11 +6,11 @@ alias atualizar="sudo apt update && sudo apt upgrade && sudo apt full-upgrade &&
 alias ufmg="cd ~/Dropbox/UFMG"
 alias sml="rlwrap /usr/bin/sml"
 alias pm="cd ~/Dropbox/UFMG/pm/tp2/src/code && atom ../.."
-alias po="cd ~/Dropbox/UFMG/po/tppo/src/code && atom ../.."
+alias po="cd ~/Dropbox/UFMG/po/tp1po/src/code && atom ../.."
 
 function gc() # Clone a repository of my own GitHub
 {
-    git clone git@github.com:ronaldpereira/$1.git
+    git clone https://github.com/ronaldpereira/$1.git
 }
 
 function ga() # Just add the commit to the local reposotory for later push
