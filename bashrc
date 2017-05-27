@@ -2,11 +2,12 @@
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 # for examples
 
-alias atualizar="sudo apt update && sudo apt upgrade && sudo apt full-upgrade && sudo apt autoremove && sudo apt clean && sudo apt update"
+alias atualizar="sudo apt update && sudo apt upgrade -y && sudo apt full-upgrade -y && sudo apt autoremove -y && sudo apt clean -y && sudo apt update"
 alias ufmg="cd ~/Dropbox/UFMG"
 alias sml="rlwrap /usr/bin/sml"
-alias pm="cd ~/Dropbox/UFMG/pm/tp2pm/src/code && atom ../.."
+alias pm="cd ~/Dropbox/UFMG/pm/tp3pm/src/code && atom ../.."
 alias po="cd ~/Dropbox/UFMG/po/tp1po/src/code && atom ../.."
+alias lp="cd ~/Dropbox/UFMG/lp/listprograms && atom ."
 
 function gc() # Clone a repository of my own GitHub
 {
