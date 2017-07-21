@@ -4,10 +4,6 @@
 
 alias atualizar="sudo apt update && sudo apt upgrade -y && sudo apt full-upgrade -y && sudo apt autoremove -y && sudo apt clean -y && sudo apt update"
 alias ufmg="cd ~/Dropbox/UFMG"
-alias sml="rlwrap /usr/bin/sml"
-alias po="cd ~/Dropbox/UFMG/po/tp2po/src/code && atom ../.."
-alias lp="cd ~/Dropbox/UFMG/lp/listprograms && atom ."
-alias so="cd ~/Dropbox/UFMG/so/tpso/src/code && atom ../.."
 
 function gc() # Clone a repository of my own GitHub
 {
