@@ -3,7 +3,6 @@
 # for examples
 
 alias atualizar="sudo apt update && sudo apt upgrade -y && sudo apt full-upgrade -y && sudo apt autoremove -y && sudo apt clean -y && sudo apt update"
-alias ufmg="cd ~/Dropbox/UFMG"
 
 function gc() # Clone a repository of my own GitHub
 {
