@@ -2,38 +2,20 @@
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 # for examples
 
-alias atualizar="sudo apt update && sudo apt upgrade -y && sudo apt full-upgrade -y && sudo apt autoremove -y && sudo apt clean -y && sudo apt update && apm update --no-confirm && apm upgrade --no-confirm && printf '\nAtualização concluída com sucesso!' && sleep 5 && exit"
-alias ufmg="cd ~/Dropbox/UFMG"
-alias courses="cd ~/Dropbox/Courses && atom ."
-alias ml="cd ~/Dropbox/Courses/machine-learning-udemy && jupyter notebook"
-alias wowanalyzer="cd ~/dev/WoWAnalyzer && git pull && gf && atom . && NODE_PATH=src/ npm run start"
+alias atualizar="sudo apt update && sudo apt upgrade -y && sudo apt full-upgrade -y && sudo apt autoremove -y && sudo apt clean -y && sudo apt update && printf '\nSystem update and upgrade successful!' && cd ~/"
 
-function gc() # Clone a repository of my own GitHub
+function gp() # Pulls from the remote repository
 {
-    git clone https://github.com/ronaldpereira/$1.git
-}
-
-function ga() # Just add the commit to the local reposotory for later push
-{
-    git add -A
-    git commit -m "$1"
-}
-
-function gf() # Fetches the local git repo with the original one
-{
-    git fetch upstream
-    git checkout master
-    git merge upstream/master
-    git config credential.helper 'cache --timeout=3600'
-    git push
+    git checkout $1
+    git pull origin $1
+    git checkout -
 }
 
 function lazygit() # Adds and push to the Git online repository
 {
     git add -A
-    git commit -m "$1"
-    git config credential.helper 'cache --timeout=3600'
-    git push
+    git commit -m "$2"
+    git push origin $1
 }
 
 # If not running interactively, don't do anything
