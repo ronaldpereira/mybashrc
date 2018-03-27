@@ -14,8 +14,8 @@ function gp() # Pulls from the remote repository
 function lazygit() # Adds and push to the Git online repository
 {
     git add -A
-    git commit -m "$2"
-    git push origin $1
+    git commit -m "$1"
+    git push
 }
 
 # If not running interactively, don't do anything
