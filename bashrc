@@ -3,6 +3,16 @@
 # for examples
 
 alias atualizar="sudo apt update && sudo apt upgrade -y && sudo apt full-upgrade -y && sudo apt autoremove -y && sudo apt clean -y && sudo apt update && printf '\nSystem update and upgrade successful!\n'"
+alias wowanalyzer="cd ~/dev/WoWAnalyzer && (webstorm . &) && gpfork master && npm start"
+
+function gpfork() # Pulls from the fork repository
+{
+    # git remote add upstream <SSH_LINK_HERE>
+    git fetch upstream
+    git checkout $1
+    git merge upstream/$1
+    git push
+}
 
 function gp() # Pulls from the remote repository
 {
