@@ -5,7 +5,7 @@
 alias atualizar="sudo apt update && sudo apt upgrade -y && sudo apt full-upgrade -y && sudo apt autoremove -y && sudo apt clean -y && sudo apt update && printf '\nSystem update and upgrade successful!\n'"
 alias swapclean="sudo swapoff -a && sudo swapon -a"
 
-function gfb()
+function gfb() # Fetches all branches and delete local merged branches
 {
     ! git fetch -p
     for branch in `git branch -vv | grep ': gone]' | tr -d '*' | awk '{print $1}'`;
@@ -24,13 +24,6 @@ function gpfork() # Pulls from the fork repository
     git checkout $1
     git merge upstream/$1
     git push
-}
-
-function gp() # Pulls from the remote repository
-{
-    git checkout $1
-    git pull origin $1
-    git checkout -
 }
 
 function lazygit() # Adds and push to the Git online repository
