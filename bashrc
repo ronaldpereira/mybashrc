@@ -3,7 +3,19 @@
 # for examples
 
 alias atualizar="sudo apt update && sudo apt upgrade -y && sudo apt full-upgrade -y && sudo apt autoremove -y && sudo apt clean -y && sudo apt update && printf '\nSystem update and upgrade successful!\n'"
-alias wowanalyzer="cd ~/dev/WoWAnalyzer && (webstorm . &) && gpfork master && npm start"
+alias swapclean="sudo swapoff -a && sudo swapon -a"
+
+function gfb()
+{
+    ! git fetch -p
+    for branch in `git branch -vv | grep ': gone]' | tr -d '*' | awk '{print $1}'`;
+    do if [ `git branch | grep '*' | cut -d ' ' -f2-` = $branch ];
+    then git checkout develop;
+    git branch -D $branch;
+    else git branch -D $branch;
+    fi;
+    done;
+}
 
 function gpfork() # Pulls from the fork repository
 {
@@ -82,10 +94,14 @@ if [ -n "$force_color_prompt" ]; then
     fi
 fi
 
+parse_git_branch() {
+ git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/'
+}
+
 if [ "$color_prompt" = yes ]; then
-    PS1='${debian_chroot:+($debian_chroot)}\[\033[1;33m\]\u\[\033[1;36m\]@\h\[\033[00m\]:\[\033[3;31m\]\w\[\033[00m\]\$ '
+    PS1='${debian_chroot:+($debian_chroot)}\[\033[1;33m\]\u\[\033[1;36m\]@\h\[\033[00m\]:\[\033[1;34m\]\w\[\033[1;32m\]$(parse_git_branch)\[\033[00m\]\$ '
 else
-    PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
+    PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w \$(parse_git_branch) \$ '
 fi
 unset color_prompt force_color_prompt
 
