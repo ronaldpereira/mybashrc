@@ -2,7 +2,7 @@
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 # for examples
 
-alias atualizar="sudo apt update && sudo apt upgrade -y && sudo apt full-upgrade -y && sudo apt autoremove -y && sudo apt clean -y && sudo apt update && printf '\nSystem update and upgrade successful!\n'"
+alias updatesystem="sudo apt update && sudo apt upgrade -y && sudo apt full-upgrade -y && sudo apt autoremove -y && sudo apt clean -y && sudo apt update && printf '\nSystem update and upgrade successful!\n'"
 alias swapclean="sudo swapoff -a && sudo swapon -a"
 
 function gfb() # Fetches all branches and delete local merged branches
